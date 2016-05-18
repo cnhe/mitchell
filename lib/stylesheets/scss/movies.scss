@@ -48,30 +48,6 @@ body {
   background-color: $teal;
 }
 
-//iPad portrait and mobile
-@media (max-width: $screen-md-max) {
-  #titleDivider{
-    display: block;
-  }
-
-  #salesStats, #lastUpdatedDate{
-    text-align: left;
-  }
-
-  .ticketsPanel .buyTickets{
-    text-align: center;
-    button {
-      padding: 10px 16px;
-      font-size: 18px;
-      line-height: 1.33333;
-      border-radius: 6px;
-    }
-    h4{
-      font-size: 21px;
-    }
-  }
-}
-
 //mobile only
 @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
   #totalOrderChart {
@@ -82,5 +58,31 @@ body {
   }
   #totalOrderStats {
     display: none;
+  }
+}
+
+//iPad portrait and mobile
+@media (max-width: $screen-sm-max) {
+  #titleDivider{
+    display: block;
+  }
+
+  #salesStats, #lastUpdatedDate{
+    text-align: left;
+  }
+
+  .ticketsPanel{ 
+    .buyTickets{
+      text-align: center;
+    }
+    button {
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.33333;
+      border-radius: 6px;
+    }
+    h4{
+      font-size: 21px;
+    }
   }
 }

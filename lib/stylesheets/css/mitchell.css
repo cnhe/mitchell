@@ -5849,21 +5849,6 @@ body {
 #totalOrders1 .progress-bar {
   background-color: #1ab394; }
 
-@media (max-width: 1279px) {
-  #titleDivider {
-    display: block; }
-  #salesStats, #lastUpdatedDate {
-    text-align: left; }
-  .ticketsPanel .buyTickets {
-    text-align: center; }
-    .ticketsPanel .buyTickets button {
-      padding: 10px 16px;
-      font-size: 18px;
-      line-height: 1.33333;
-      border-radius: 6px; }
-    .ticketsPanel .buyTickets h4 {
-      font-size: 21px; } }
-
 @media (min-width: 320px) and (max-width: 599px) {
   #totalOrderChart {
     display: inline-block; }
@@ -5871,3 +5856,18 @@ body {
       display: inline; }
   #totalOrderStats {
     display: none; } }
+
+@media (max-width: 768px) {
+  #titleDivider {
+    display: block; }
+  #salesStats, #lastUpdatedDate {
+    text-align: left; }
+  .ticketsPanel .buyTickets {
+    text-align: center; }
+  .ticketsPanel button {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px; }
+  .ticketsPanel h4 {
+    font-size: 21px; } }
