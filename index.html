@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mitchell Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="lib/stylesheets/css/mitchell.css" charset="utf-8">
+    <link rel="stylesheet" href="lib/stylesheets/css/angular-chart.min.css" charset="utf-8">
+    <script src="lib/scripts/angular.min.js"></script>
+    <script src="lib/scripts/ui-bootstrap-tpls-1.3.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js"></script>
+    <script src="lib/scripts/angular-chart.min.js"></script>
+	  <script src="lib/scripts/app.js"></script>
+	  <script src="lib/scripts/controllers.js"></script>
+  </head>
+  <body ng-app="mitchellMovieApp" ng-controller="appController">
+    <div class="container-fluid">
+      <div id="movieChartPanel" class="element">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Total Movie Sales</h3>
+            <span>Comparison - {{movies.movie1.title}} and {{movies.movie2.title}}</span>
+          </div>
+          <hr id="titleDivider"/>
+          <div id="salesStats" class="col-md-6 text-right">
+            <p>Average value of sales in the past month in: <b>United States</b></p>
+            <p>All sales: 162,862</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="monthlyChart" class="col-md-8">
+            <canvas id="line" class="chart chart-line" chart-data="lineData"
+              chart-labels="lineLabels" chart-colours="colors" chart-legend="false" chart-series="lineSeries"
+              chart-click="onClick" >
+            </canvas> 
+          </div>
+
+          <div class="col-md-4">
+            <div id="totalOrderStats">
+              <div ng-repeat="movie in movies" id={{'totalOrders'+$index}}>
+                <h1>{{movie.totalOrders}}</h1>
+                <p>Total orders - {{movie.title}}</p>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{movie.percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{movie.percentage}}%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <canvas id="totalOrderChart" class="chart chart-doughnut"
+              chart-data="donutData" chart-labels="donutLabels" chart-colours="colors" chart-legend="true">
+            </canvas> 
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <p class="col-md-9">
+            <b>Analysis of sales:</b> The value has been changed over time, and last month reached a level over $50,000.
+          </p>
+          <p class="col-md-3 text-right">
+            <span id="lastUpdatedDate" class="glyphicon glyphicon-time" aria-hidden="true"></span>
+            Update on 16.07.2015
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" ng-repeat="movie in movies">
+          <div class="element ticketsPanel">
+            <h1>{{movie.title}}</h1>
+            <p><b>Release Date</b> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{movie.releaseDate}}</p>
+            <div class="row buyTickets">
+              <div class="col-md-6"><h4>May 3 2015</h4></div>
+              <div class="col-md-6"><button type="button" class="btn btn-primary">Buy Tickets</button></div>
+            </div>
+            <br/>
+            <div class="row buyTickets">
+              <div class="col-md-6"><h4>May 4 2015</h4></div>
+              <div class="col-md-6"><button type="button" class="btn btn-primary">Buy Tickets</button></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
