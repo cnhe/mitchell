@@ -5832,7 +5832,7 @@ body {
 .ticketsPanel h1 {
   font-weight: bold; }
 
-#titleDivider, #totalOrderChart, #totalOrderChart + chart-legend {
+.divider, #totalOrderChart, #totalOrderChart + chart-legend {
   display: none; }
 
 #movieChartPanel {
@@ -5858,10 +5858,15 @@ body {
     display: none; } }
 
 @media (max-width: 768px) {
-  #titleDivider {
+  .divider {
     display: block; }
   #salesStats, #lastUpdatedDate {
     text-align: left; }
+  #totalOrderStats {
+    text-align: center; }
+  #salesAnalysis {
+    font-size: 24px;
+    margin-bottom: 10px; }
   .ticketsPanel .buyTickets {
     text-align: center; }
   .ticketsPanel button {

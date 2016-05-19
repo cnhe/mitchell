@@ -21,7 +21,7 @@
             <h3>Total Movie Sales</h3>
             <span>Comparison - {{movies.movie1.title}} and {{movies.movie2.title}}</span>
           </div>
-          <hr id="titleDivider"/>
+          <hr class="divider"/>
           <div id="salesStats" class="col-md-6 text-right">
             <p>Average value of sales in the past month in: <b>United States</b></p>
             <p>All sales: 162,862</p>
@@ -46,15 +46,13 @@
                 </div>
               </div>
             </div>
-
-            <canvas id="totalOrderChart" class="chart chart-doughnut"
-              chart-data="donutData" chart-labels="donutLabels" chart-colours="colors" chart-legend="true">
-            </canvas> 
+            <img id="totalOrderChart" src="lib/images/donutChart.png">
           </div>
         </div>
         <br/>
+        <hr class="divider"/>
         <div class="row">
-          <p class="col-md-9">
+          <p id="salesAnalysis" class="col-md-9">
             <b>Analysis of sales:</b> The value has been changed over time, and last month reached a level over $50,000.
           </p>
           <p class="col-md-3 text-right">
