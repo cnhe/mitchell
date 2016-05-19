@@ -5822,14 +5822,14 @@ body {
   background: #f3f3f3;
   color: #6a6a6a; }
 
-.element {
+.panel {
   background: #ffffff;
   padding: 15px;
   margin-bottom: 15px; }
-  .element h1, .element h2, .element h3 {
+  .panel h1, .panel h2, .panel h3 {
     margin-top: 10px; }
 
-.ticketsPanel h1 {
+.ticketsPanel > h1 {
   font-weight: bold; }
 
 .divider, #totalOrderChart {
@@ -5854,7 +5854,9 @@ body {
     display: inline-block;
     width: 100%; }
   #totalOrderStats {
-    display: none; } }
+    display: none; }
+  .ticketsPanel > h1 {
+    font-size: 24px; } }
 
 @media (max-width: 768px) {
   .divider {

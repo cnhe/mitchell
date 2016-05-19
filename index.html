@@ -15,7 +15,7 @@
   </head>
   <body ng-app="mitchellMovieApp" ng-controller="appController">
     <div class="container-fluid">
-      <div id="movieChartPanel" class="element">
+      <div id="movieChartPanel" class="panel">
         <div class="row">
           <div class="col-md-6">
             <h3>Total Movie Sales</h3>
@@ -64,7 +64,7 @@
 
       <div class="row">
         <div class="col-md-6" ng-repeat="movie in movies">
-          <div class="element ticketsPanel">
+          <div class="panel ticketsPanel">
             <h1>{{movie.title}}</h1>
             <p><b>Release Date</b> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{movie.releaseDate}}</p>
             <div class="row buyTickets">

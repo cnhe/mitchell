@@ -10,7 +10,7 @@ body {
   color: $darkGray;
 }
 
-.element {
+.panel {
   background: $white;
   padding: 15px;
   margin-bottom: 15px;
@@ -19,10 +19,8 @@ body {
   }
 }
 
-.ticketsPanel {
-  h1{
+.ticketsPanel > h1{
     font-weight: bold;
-  }
 }
 
 .divider, #totalOrderChart{
@@ -56,6 +54,9 @@ body {
   }
   #totalOrderStats {
     display: none;
+  }
+  .ticketsPanel > h1{
+    font-size: 24px;
   }
 }
 
