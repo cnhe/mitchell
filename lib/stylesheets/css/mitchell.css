@@ -5832,7 +5832,7 @@ body {
 .ticketsPanel h1 {
   font-weight: bold; }
 
-.divider, #totalOrderChart, #totalOrderChart + chart-legend {
+.divider, #totalOrderChart {
   display: none; }
 
 #movieChartPanel {
@@ -5851,9 +5851,8 @@ body {
 
 @media (min-width: 320px) and (max-width: 599px) {
   #totalOrderChart {
-    display: inline-block; }
-    #totalOrderChart + chart-legend {
-      display: inline; }
+    display: inline-block;
+    width: 100%; }
   #totalOrderStats {
     display: none; } }
 
@@ -5865,8 +5864,8 @@ body {
   #totalOrderStats {
     text-align: center; }
   #salesAnalysis {
-    font-size: 24px;
-    margin-bottom: 10px; }
+    font-size: 18px;
+    margin-bottom: 30px; }
   .ticketsPanel .buyTickets {
     text-align: center; }
   .ticketsPanel button {
